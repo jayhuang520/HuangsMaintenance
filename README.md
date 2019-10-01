@@ -1,11 +1,19 @@
-# 4 - Authenticating users
+Instructions to test the application:
+Open Jetbrian WebStorm:
+cd C:\Users\JayHu\WebstormProjects\HuangsMaintenance
 
-![Datastore Build Status][ci-badge-datastore]
+Make sure npm is installed:
+npm -v
+to check the version of the npm you have.
 
-[ci-badge-datastore]: https://storage.googleapis.com/nodejs-getting-started-tests-badges/4-datastore.svg
+To deploy to localhost:
+npm start
 
-This folder contains the sample code for the [Authenticating users][step-4]
-tutorial. Please refer to the tutorial for instructions on configuring, running,
-and deploying this sample.
+Go to your web browser of your choice:
+http://localhost:8080/
 
-[step-4]: https://cloud.google.com/nodejs/getting-started/authenticate-users
+Deploy to google cloud platform
+gcloud deploy app
+
+To view your application in the web browser run:
+  $ gcloud app browse
