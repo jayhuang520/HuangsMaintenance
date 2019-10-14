@@ -17,3 +17,6 @@ gcloud deploy app
 
 To view your application in the web browser run:
   $ gcloud app browse
+
+To integrate google api calendar:
+4/sAGw20COPovFPqMpLB8flktzMbpllSsEfjo8Njak9t2ck2j9GeAL5gk

@@ -70,6 +70,27 @@ router.get('/mine', oauth2.required, (req, res, next) => {
 });
 // [END mine]
 
+// [START calendar]
+// Use the oauth2.required middleware to ensure that only logged-in users
+// can access this handler.
+router.get('/calendar', oauth2.required, (req, res, next) => {
+    model.listBy(
+        req.user.id,
+        10,
+        req.query.pageToken,
+        (err, entities, cursor) => {
+            if (err) {
+                next(err);
+                return;
+            }
+            res.render('books/calendar.pug', {
+                books: entities,
+                nextPageToken: cursor,
+            });
+        }
+    );
+});
+// [END calendar]
 /**
  * GET /books/add
  *
