@@ -91,6 +91,28 @@ router.get('/calendar', oauth2.required, (req, res, next) => {
     );
 });
 // [END calendar]
+
+// [START template]
+// Use the oauth2.required middleware to ensure that only logged-in users
+// can access this handler.
+router.get('/template', oauth2.required, (req, res, next) => {
+    model.listBy(
+        req.user.id,
+        10,
+        req.query.pageToken,
+        (err, entities, cursor) => {
+            if (err) {
+                next(err);
+                return;
+            }
+            res.render('books/template.pug', {
+                books: entities,
+                nextPageToken: cursor,
+            });
+        }
+    );
+});
+// [END template]
 /**
  * GET /books/add
  *
