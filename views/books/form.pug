@@ -29,6 +29,12 @@ block content
       label(for="description") Description
       input.form-control(type="text", name="description", id="description", value=book.description)
     .form-group
+      label(for="width") Width
+      input.form-control(type="text", name="width", id="width", value=book.width)
+    .form-group
+      label(for="height") Height
+      input.form-control(type="text",name="height", id="height", value=book.height)
+    .form-group
       label(for="image") Cover Image
       input.form-control(type="file", name="image", id="image")
     .form-group.hidden
@@ -41,3 +47,4 @@ block content
       label(for="createdById") Created by ID
       input.form-control(type="text", name="createdById", id="createdById", value=book.createdById)
     button.btn.btn-success(type="submit") Save
+    button.btn.btn-success(type="Calculate") Calculate
