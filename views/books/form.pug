@@ -47,4 +47,23 @@ block content
       label(for="createdById") Created by ID
       input.form-control(type="text", name="createdById", id="createdById", value=book.createdById)
     button.btn.btn-success(type="submit") Save
-    button.btn.btn-success(type="Calculate") Calculate
+    script.
+      var calculateCost = function (w, h) {
+        console.log("Calling calculate cost")
+        console.log("The width is "+ parseInt(w))
+        console.log("The height is "+ parseInt(h))
+
+        var z = parseInt(w) * parseInt(h) * 10;
+        console.log(z)
+
+      };
+    //button(onclick=calculateCost(width,height)) Calculate
+    //button(type='button', onclick='c' ) PressMe
+    button( onclick= "calculateCost('#{10,10}')" ) Calculate
+
+    //button.btn.btn-success(type="Calculate", onclick=calculateCost(width,height)) Calculate
+
+
+
+
+
