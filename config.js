@@ -41,6 +41,7 @@ nconf
     OAUTH2_CLIENT_ID: '1059300341584-dlfj8kvmied6sqlfskb2r7coj1d47q0r.apps.googleusercontent.com',
     OAUTH2_CLIENT_SECRET: 'g6zisfFw4KoGjxoxm1N4Ggqc',
     OAUTH2_CALLBACK: 'http://localhost:8080/auth/google/callback',
+      //OAUTH2_CALLBACK: 'https://huangsmaintenance.appspot.com/login/callback',
 
     PORT: 8080,
 

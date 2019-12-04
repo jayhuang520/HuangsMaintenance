@@ -30,10 +30,13 @@ block content
       input.form-control(type="text", name="description", id="description", value=book.description)
     .form-group
       label(for="width") Width
-      input.form-control(type="text", name="width", id="width", value=book.width)
+      input.form-control(type="integer", name="width", id="width", value=book.width)
     .form-group
       label(for="height") Height
-      input.form-control(type="text",name="height", id="height", value=book.height)
+      input.form-control(type="integer",name="height", id="height", value=book.height)
+    .form-group
+      label(for="costPerSquare") Cost Per Square feet
+      input.form-control(type="integer",name="costPerSquare", id="costPerSquare", value=book.costPerSquare)
     .form-group
       label(for="image") Cover Image
       input.form-control(type="file", name="image", id="image")
@@ -47,22 +50,18 @@ block content
       label(for="createdById") Created by ID
       input.form-control(type="text", name="createdById", id="createdById", value=book.createdById)
     button.btn.btn-success(type="submit") Save
-    script.
-      var calculateCost = function (w, h) {
-        console.log("Calling calculate cost")
-        console.log("The width is "+ parseInt(w))
-        console.log("The height is "+ parseInt(h))
-
-        var z = parseInt(w) * parseInt(h) * 10;
-        console.log(z)
-
-      };
-    //button(onclick=calculateCost(width,height)) Calculate
-    //button(type='button', onclick='c' ) PressMe
-    button( onclick= "calculateCost('#{10,10}')" ) Calculate
-
-    //button.btn.btn-success(type="Calculate", onclick=calculateCost(width,height)) Calculate
-
+    //script.
+    //  var calculateCost = function (w, h) {
+    //    console.log("Calling calculate cost")
+    //    console.log("The width is "+ !{w})
+    //    console.log("The height is "+ !{h})
+    //
+    //    var z = w * h * 10;
+    //    console.log(z)
+    //  };
+    //button( onclick= "calculateCost('#{book.width,book.height}')" ) Calculate
+    //button( onclick= "calculateCost('#{book.width,book.height}')" ) Calculate
+    h3 The total cost of the project is: $#{book.height * book.width * book.costPerSquare}
 
 
 

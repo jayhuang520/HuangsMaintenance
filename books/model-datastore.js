@@ -139,7 +139,7 @@ function update(id, data, cb) {
 
   const entity = {
     key: key,
-    data: toDatastore(data, ['description','width','height']),
+    data: toDatastore(data, ['description','width','height','costPerSquare']),
   };
 
   ds.save(entity, err => {
