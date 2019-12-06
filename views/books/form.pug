@@ -29,14 +29,20 @@ block content
       label(for="description") Description
       input.form-control(type="text", name="description", id="description", value=book.description)
     .form-group
-      label(for="width") Width
+      label(for="width") Width(feet)
       input.form-control(type="integer", name="width", id="width", value=book.width)
     .form-group
-      label(for="height") Height
+      label(for="height") Height(feet)
       input.form-control(type="integer",name="height", id="height", value=book.height)
     .form-group
       label(for="costPerSquare") Cost Per Square feet
       input.form-control(type="integer",name="costPerSquare", id="costPerSquare", value=book.costPerSquare)
+    .form-group
+      label(for="labor") labor per square feet
+      input.form-control(type="integer",name="labor", id="labor", value=book.labor)
+    .form-group
+      label(for="savingProject") saving per month
+      input.form-control(type="integer",name="savingProject", id="savingProject", value=book.savingProject)
     .form-group
       label(for="image") Cover Image
       input.form-control(type="file", name="image", id="image")
@@ -61,7 +67,9 @@ block content
     //  };
     //button( onclick= "calculateCost('#{book.width,book.height}')" ) Calculate
     //button( onclick= "calculateCost('#{book.width,book.height}')" ) Calculate
-    h3 The total cost of the project is: $#{book.height * book.width * book.costPerSquare}
+
+    h3 The total cost of the project is: $#{total= book.height * book.width * book.costPerSquare * book.labor}
+    h3 The amount of time for you to save for this project is: #{total / book.savingProject } months
 
 
 
