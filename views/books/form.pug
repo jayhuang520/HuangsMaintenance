@@ -56,21 +56,6 @@ block content
       label(for="createdById") Created by ID
       input.form-control(type="text", name="createdById", id="createdById", value=book.createdById)
     button.btn.btn-success(type="submit") Save
-    //script.
-    //  var calculateCost = function (w, h) {
-    //    console.log("Calling calculate cost")
-    //    console.log("The width is "+ !{w})
-    //    console.log("The height is "+ !{h})
-    //
-    //    var z = w * h * 10;
-    //    console.log(z)
-    //  };
-    //button( onclick= "calculateCost('#{book.width,book.height}')" ) Calculate
-    //button( onclick= "calculateCost('#{book.width,book.height}')" ) Calculate
 
     h3 The total cost of the project is: $#{total= book.height * book.width * book.costPerSquare * book.labor}
     h3 The amount of time for you to save for this project is: #{total / book.savingProject } months
-
-
-
-

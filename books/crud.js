@@ -89,8 +89,12 @@ router.get('/calendar', oauth2.required, (req, res, next) => {
             });
         }
     );
+
+
 });
 // [END calendar]
+
+
 
 // [START template]
 // Use the oauth2.required middleware to ensure that only logged-in users
@@ -263,6 +267,7 @@ router.get('/:book/delete', (req, res, next) => {
     res.redirect(req.baseUrl);
   });
 });
+
 
 /**
  * Errors on "/books/*" routes.
